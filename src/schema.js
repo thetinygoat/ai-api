@@ -8,14 +8,9 @@ const typeDefs = gql`
         password: String
         apikey: String
     }
-    type Resource {
-        id: ID!
-        type: String
-        name: String
-    }
+
     type Query {
-        user: User
-        resource: Resource
+        user(email: String!): User
     }
 `;
 
