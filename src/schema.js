@@ -6,6 +6,13 @@ const typeDefs = gql`
         name: String
         email: String
         apikey: String
+        resources: [Resource]!
+    }
+
+    type Resource {
+        rid: ID!
+        name: String!
+        description: String
     }
 
     type Query {
